@@ -118,14 +118,15 @@ static const NSUInteger NUMBER_OF_MINES = 10;
 
 - (void)mineSweeperTilePressed:(MineSweeperTile *)sender
 {
-    [sender setSelected:YES];
-    
-    if (sender.cell.isMine) {
-        [self endGame];
-    }
-    else {
-        if (sender.cell.neighborMines == 0 && !sender.cell.isMine) {
-            [self expandEmptyMineSweeperCellsForCell:sender.cell];
+    if (!sender.cell.marked) {
+        [sender setSelected:YES];
+        if (sender.cell.isMine) {
+            [self endGame];
+        }
+        else {
+            if (sender.cell.neighborMines == 0 && !sender.cell.isMine) {
+                [self expandEmptyMineSweeperCellsForCell:sender.cell];
+            }
         }
     }
 }
