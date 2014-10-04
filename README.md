@@ -4,7 +4,9 @@ minesweeper
 
 ### How To Play
 
-Click on any tile to reveal whether it covers a mine. Long press on any tile to mark it as a possible mine. 
+Click on any tile to reveal whether it covers a mine. 
+
+Long press on any tile to mark it as a possible mine. 
 
 ### Functions
 
