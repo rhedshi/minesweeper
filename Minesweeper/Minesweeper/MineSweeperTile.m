@@ -97,7 +97,7 @@
             }
             else
             {
-                NSString *title = self.cell.neighborMines == 0 ? @"" : [NSString stringWithFormat:@"%d", self.cell.neighborMines];
+                NSString *title = self.cell.neighborMines == 0 ? @"" : [NSString stringWithFormat:@"%ld", self.cell.neighborMines];
                 
                 UIColor *color;
                 switch (self.cell.neighborMines) {
